@@ -1,0 +1,13 @@
+.AdvancedFilterPosition {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(228, 197, 119);
+}
+
+.SearchButtonPosition {
+    padding-left: 10%;
+}
