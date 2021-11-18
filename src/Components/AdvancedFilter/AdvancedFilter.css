@@ -1,7 +1,10 @@
 .AdvancedFilterPosition {
     text-align: center;
     width: 80%;
+    border-bottom: black;
+    border-width: 3px;
     margin-left: 10%;
+    margin-bottom: 0%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,4 +13,9 @@
 
 .SearchButtonPosition {
     padding-left: 10%;
+}
+
+.Button {
+    width: 30px;
+    height: 20px;
 }
