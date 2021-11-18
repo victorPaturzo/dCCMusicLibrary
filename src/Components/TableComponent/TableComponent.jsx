@@ -1,4 +1,3 @@
-import React, {Component} from "react";
 import "./TableComponent.css";
 
     function MusicTable(props) {
@@ -6,11 +5,11 @@ import "./TableComponent.css";
         let renderedMusic = props.songs.map(song => {
             return(
                 <tr className="Word-spacer">
-                <td className="Word-spacer">{song.title}</td>
-                <td className="Word-spacer">{song.album}</td>
-                <td className="Word-spacer">{song.artist}</td>
-                <td className="Word-spacer">{song.genre}</td>
-                <td className="Word-spacer">{song.releaseDate}</td>
+                    <td className="Word-spacer">{song.title}</td>
+                    <td className="Word-spacer">{song.album}</td>
+                    <td className="Word-spacer">{song.artist}</td>
+                    <td className="Word-spacer">{song.genre}</td>
+                    <td className="Word-spacer">{song.releaseDate}</td>
                 </tr> 
             )
         })

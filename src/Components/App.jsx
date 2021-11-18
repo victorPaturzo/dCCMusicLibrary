@@ -32,14 +32,29 @@ class App extends Component {
     }
 
     findSong = (userInput) => {
-      console.log("Hello", userInput)
+      let i=0;
+      let result = this.state.music.filter((song) => {
+        if (userInput.title === this.state.music[i].title || userInput.album === this.state.music[i].album || userInput.artist === this.state.music[i].artist 
+          || userInput.genre === this.state.music[i].genre || userInput.releaseDate === this.state.music[i].releaseDate) {
+            i++;
+            return true;
+          } else {
+            i++;
+            return false;
+        
+      }
+      })
+      console.log(result);
+      this.setState({music: result})
     }
+
+  
 
     render() {
       return (
         <div className="container-fluid">
           <TitleBar />
-          <AdvancedFilter />
+          <AdvancedFilter findASong={this.findSong}/>
             <h1 className="TableComponent-logo">Music Library</h1>
             <div className="Table-body">{this.state.music.length > 0 ? 
                 <TableComponent songs={this.state.music} />
@@ -48,7 +63,7 @@ class App extends Component {
           <Footer />
         </div>
         
-      ) 
+      )
     }
 }
 
